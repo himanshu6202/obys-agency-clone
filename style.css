@@ -1,14 +1,29 @@
+@font-face {
+    font-family: plain-light;
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Plain Light";
+    font-family: "plain-light";
     color: white;
 }
 
 html,body{
     width:100%;
     height:100%;
+}
+#cursor{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.533);
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
 }
 
 #loader{
@@ -86,7 +101,7 @@ html,body{
         font-family: "Silk Serif";
         -webkit-text-stroke: 0.1px #fff;
         color: transparent;
-        font-weight: 500;
+        font-weight: 400;
         opacity: 0;
     }
 }
@@ -102,4 +117,58 @@ html,body{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 4.5vw;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#nav-part2 h4{
+    font-size: 0.8vw;
+    font-weight: 100;
+}
+
+.hero{
+    height: fit-content;
+    width: 72%;
+    margin-left: 27%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.hero:nth-child(2){
+    margin-top: 18vh;
+} 
+
+.hero h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+#hero3 h2, h3{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+#hero3 h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
 }
